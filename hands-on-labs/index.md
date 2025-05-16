@@ -1,6 +1,6 @@
-# 🔐 Code Security
+# Code Security
 
-## 🧭 Overview
+## Overview
 
 **Lacework FortiCNAPP Code Security** is a comprehensive suite designed to secure your application development lifecycle—from code to cloud. It helps identify insecure patterns, third-party vulnerabilities, and misconfigurations **before deployment**, enabling organizations to shift security left.
 
@@ -21,9 +21,9 @@ This guide is intended for **developers, DevOps, and security engineers** managi
 
 ---
 
-## 🖥️ Platform Support: CLI & IDEs
+## Platform Support: CLI & IDEs
 
-### 📦 CLI (SAST, SCA, IaC)
+### CLI (SAST, SCA, IaC)
 
 | Environment       | Supported? |
 |-------------------|------------|
@@ -31,7 +31,7 @@ This guide is intended for **developers, DevOps, and security engineers** managi
 | Windows           | ❌ No      |
 | macOS             | ✅ Yes     |
 
-### 💻 IDE Support (VS Code, IntelliJ)
+### IDE Support (VS Code, IntelliJ)
 
 | IDE       | IaC | SCA | SAST |
 |-----------|-----|-----|------|
@@ -40,7 +40,7 @@ This guide is intended for **developers, DevOps, and security engineers** managi
 
 ---
 
-## 🔁 SCM Integration Support
+## SCM Integration Support
 
 Lacework supports SCA, SAST, and IaC scanning via direct SCM integrations.
 
@@ -53,7 +53,7 @@ Lacework supports SCA, SAST, and IaC scanning via direct SCM integrations.
 
 ---
 
-## ⚙️ CI/CD Integration Matrix
+## CI/CD Integration Matrix
 
 Lacework CLI tools are CI/CD-friendly for both **SCA/SAST** and **IaC scanning**.
 
@@ -78,7 +78,7 @@ Lacework CLI tools are CI/CD-friendly for both **SCA/SAST** and **IaC scanning**
 
 ---
 
-## 📝 Summary
+## Summary
 
 - **Use CLI** for flexible local or CI/CD scanning with full control.
 - **Use VS Code extension** for real-time feedback during development.
