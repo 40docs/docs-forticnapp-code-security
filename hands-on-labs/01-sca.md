@@ -283,8 +283,11 @@ cd lab_forticnapp_code_security
 
 1. Open the folder in **Visual Studio Code**
 2. Install the **Lacework Security** extension from the Marketplace
+   ![Lacework Security Extension](images/vscode1.png)
 3. Click the **Lacework shield icon** in the sidebar
-4. Sign in using **“Sign in with Lacework”** (OAuth)
+   ![VS Code Settings](images/vscode2.png)
+4. In the search bag, type `ext:lacework-security.lacework` and fill-in the API tokens from ![Prerequisites](00-prerequisites.md#required-tools) in `configure your API key`.
+   ![Extension Configuration](images/vscode3.png)
 5. Run a scan using one of the options:
 
    - **Start All Scans**
