@@ -237,16 +237,16 @@ SmartFix analyzes vulnerable packages and evaluates future versions to determine
 #### Recommendation Algorithms
 
 1. **Minimal Version with No Vulnerabilities**  
-   - Smallest upgrade that fixes **all** known vulnerabilities.
+   Smallest upgrade that fixes **all** known vulnerabilities.
 
-2. **Minimal Version with No Critical Vulnerabilities**  
-   - Fixes critical CVEs while minimizing version drift.
+1. **Minimal Version with No Critical Vulnerabilities**  
+   Fixes critical CVEs while minimizing version drift.
 
-3. **Maximal Version with No Vulnerabilities**  
-   - Latest version that resolves all issues.
+1. **Maximal Version with No Vulnerabilities**  
+   Latest version that resolves all issues.
 
-4. **No SmartFix Recommendation**  
-   - Returned when no safe upgrade path exists.
+1. **No SmartFix Recommendation**  
+   Returned when no safe upgrade path exists.
 
 !!! info "Prioritization Order"
     SmartFix evaluates upgrade options in this order:
