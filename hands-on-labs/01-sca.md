@@ -54,28 +54,12 @@ Lacework FortiCNAPP can generate **Software Bills of Materials (SBOMs)** to prov
 
 ---
 
-### Generating an SBOM
+### Generating SBOM's
 
-To generate an SBOM for your project:
+FortiCNAPP supports generating Software Bills of Materials (SBOMs) in standard formats like CycloneDX, SPDX, SARIF, and more.
 
-=== "Command"
-
-```bash
-lacework sca scan ./ -f cdx-json -o sbom.json
-```
-
-=== "Flags"
-
-- `-f`: Specifies the format of the SBOM (e.g., `cdx-json` for CycloneDX).
-- `-o`: Specifies the output file name and path.
-
-!!! example "CycloneDX JSON Output"
-    To generate a CycloneDX SBOM in JSON format:
-    ```bash
-    lacework sca scan ./ -f cdx-json -o sbom.json
-    ```
-
----
+!!! tip
+    For a full walkthrough on generating SBOMs from CLI, see the [Hands-On Labs → SBOM Generation](../01-sca.md#sbom-generation)
 
 ### Use Cases
 
@@ -318,14 +302,6 @@ SmartFix is available in multiple developer-facing environments to provide remed
 
 ---
 
-### Example CLI Usage
-
-```bash
-lacework sca scan ./ --output sca.json
-```
-
-📎 SmartFix data will be included in the output and shown in the UI if results are uploaded.
-
 ## Hands-On
 
 This guided section helps you generate a vulnerable project, scan it, and see SmartFix in action using GitHub and VS Code.
@@ -386,6 +362,29 @@ This opens a pull request that triggers FortiCNAPP scanning and displays SmartFi
 1. Open the PR on GitHub
 2. Review SCA findings and SmartFix suggestions
 3. Optionally apply fixes manually or inline in the IDE
+
+---
+
+### SBOM Generation
+
+To generate an SBOM for your project:
+
+=== "Command"
+
+```bash
+lacework sca scan ./ -f cdx-json -o sbom.json
+```
+
+=== "Flags"
+
+- `-f`: Specifies the format of the SBOM (e.g., `cdx-json` for CycloneDX).
+- `-o`: Specifies the output file name and path.
+
+!!! example "CycloneDX JSON Output"
+    To generate a CycloneDX SBOM in JSON format:
+    ```bash
+    lacework sca scan ./ -f cdx-json -o sbom.json
+    ```
 
 ---
 
