@@ -60,9 +60,9 @@ To generate an SBOM for your project:
 
 === "Command"
 
-    ```bash
-    lacework sca scan ./ -f cdx-json -o sbom.json
-    ```
+```bash
+lacework sca scan ./ -f cdx-json -o sbom.json
+```
 
 === "Flags"
 
@@ -152,22 +152,22 @@ Lacework SCA uses a YAML config file to enforce license restrictions.
 
 #### File Path
 
-    ```txt
-    ~/.config/lacework/components/sca/.lacework/codesec.yml
-    ```
+```txt
+~/.config/lacework/components/sca/.lacework/codesec.yml
+```
 
 #### Example Config
 
-    ```yaml
-    environments:
-      - name: default
-        licenses-not-allowed: []
-        license-categories-not-allowed: []
-    
-      - name: demo
-        licenses-not-allowed: []
-        license-categories-not-allowed: [forbidden, restricted]
-    ```
+```yaml
+environments:
+  - name: default
+    licenses-not-allowed: []
+    license-categories-not-allowed: []
+
+  - name: demo
+    licenses-not-allowed: []
+    license-categories-not-allowed: [forbidden, restricted]
+```
 
 !!! tip "Customizing License Policies"
     - Use `licenses-not-allowed` to block specific license names (e.g. `"GPL-3.0"`)
@@ -179,9 +179,9 @@ Lacework SCA uses a YAML config file to enforce license restrictions.
 
 To scan a project using a specific license policy environment:
 
-    ```bash
-    lacework sca dir . -o sca.json --pull-deps --env demo
-    ```
+```bash
+lacework sca dir . -o sca.json --pull-deps --env demo
+```
 
 #### Flags
 
@@ -254,10 +254,13 @@ SmartFix analyzes vulnerable packages and evaluates future versions to determine
 
 1. **Minimal Version with No Vulnerabilities**  
    - Smallest upgrade that fixes **all** known vulnerabilities.
+
 2. **Minimal Version with No Critical Vulnerabilities**  
    - Fixes critical CVEs while minimizing version drift.
+
 3. **Maximal Version with No Vulnerabilities**  
    - Latest version that resolves all issues.
+
 4. **No SmartFix Recommendation**  
    - Returned when no safe upgrade path exists.
 
@@ -317,9 +320,9 @@ SmartFix is available in multiple developer-facing environments to provide remed
 
 ### Example CLI Usage
 
-    ```bash
-    lacework sca scan ./ --output sca.json
-    ```
+```bash
+lacework sca scan ./ --output sca.json
+```
 
 📎 SmartFix data will be included in the output and shown in the UI if results are uploaded.
 
@@ -331,10 +334,10 @@ This guided section helps you generate a vulnerable project, scan it, and see Sm
 
 ### Step 1: Clone the Lab Project
 
-    ```bash
-    git clone https://github.com/40docs/lab_forticnapp_code_security.git
-    cd lab_forticnapp_code_security
-    ```
+```bash
+git clone https://github.com/40docs/lab_forticnapp_code_security.git
+cd lab_forticnapp_code_security
+```
 
 ---
 
@@ -390,9 +393,9 @@ This opens a pull request that triggers FortiCNAPP scanning and displays SmartFi
 
 Run a scan and generate SmartFix recommendations via CLI:
 
-    ```bash
-    lacework sca scan ./app --output sca-results.json
-    ```
+```bash
+lacework sca scan ./app --output sca-results.json
+```
 
 !!! info "SBOM + SmartFix"
     If you include `--formats cdx-json` or similar, the scan will also produce a Software Bill of Materials (SBOM) alongside vulnerability results.
