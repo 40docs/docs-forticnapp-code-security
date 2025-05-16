@@ -59,7 +59,7 @@ Lacework FortiCNAPP can generate **Software Bills of Materials (SBOMs)** to prov
 FortiCNAPP supports generating Software Bills of Materials (SBOMs) in standard formats like CycloneDX, SPDX, SARIF, and more.
 
 !!! tip
-    For a full walkthrough on generating SBOMs from CLI, see the [Hands-On Labs → SBOM Generation](../01-sca.md#sbom-generation)
+    For a full walkthrough on generating SBOMs from CLI, see the [Hands-On Labs → SBOM Generation](01-sca.md#sbom-generation)
 
 ### Use Cases
 
@@ -237,16 +237,16 @@ SmartFix analyzes vulnerable packages and evaluates future versions to determine
 #### Recommendation Algorithms
 
 1. **Minimal Version with No Vulnerabilities**  
-   Smallest upgrade that fixes **all** known vulnerabilities.
+    Smallest upgrade that fixes **all** known vulnerabilities.
 
 1. **Minimal Version with No Critical Vulnerabilities**  
-   Fixes critical CVEs while minimizing version drift.
+    Fixes critical CVEs while minimizing version drift.
 
 1. **Maximal Version with No Vulnerabilities**  
-   Latest version that resolves all issues.
+    Latest version that resolves all issues.
 
 1. **No SmartFix Recommendation**  
-   Returned when no safe upgrade path exists.
+    Returned when no safe upgrade path exists.
 
 !!! info "Prioritization Order"
     SmartFix evaluates upgrade options in this order:
