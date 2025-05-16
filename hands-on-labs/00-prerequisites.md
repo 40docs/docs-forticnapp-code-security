@@ -13,8 +13,7 @@ Before you begin building and testing Code Security in FortiCNAPP, ensure the fo
 | Tool            | Description                             |
 |-----------------|-----------------------------------------|
 | `lacework` CLI  | FortiCNAPP CLI with IaC component       |
-| `terraform`     | CLI to execute test configurations      |
-| Text editor     | Recommended: VS Code or Vim             |
+| `VS Code`       | Lacework Security VS Code Extension     |
 
 ??? tip "Install CLI"
 
