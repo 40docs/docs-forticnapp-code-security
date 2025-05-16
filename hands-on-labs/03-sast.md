@@ -133,7 +133,7 @@ This walkthrough demonstrates SAST findings using a vulnerable Python app.
     ```
 
 !!! note "Trigger a Scan"
-    Any commit or PR to the repo triggers a SAST scan automatically.
+    A Pull Request to the repo triggers a SAST scan automatically.
 
 ---
 
@@ -143,9 +143,7 @@ You’ll receive:
 
 * ❌ Finding description
 * 📄 Affected file + line
-* 🧠 **SmartFix suggestion** (e.g., “Use parameterized query”)
-
-Apply the fix manually or in VS Code with 1 click (if available).
+* 🧠 **SmartFix suggestion**
 
 ---
 
