@@ -67,10 +67,10 @@ This walkthrough demonstrates SAST findings using a vulnerable Python app.
 
 ### Step 1: Clone the Demo Repo
 
-    ```bash
-    git clone https://github.com/40docs/lab_forticnapp_code_security.git
-    cd lab_forticnapp_code_security
-    ```
+```bash
+git clone https://github.com/40docs/lab_forticnapp_code_security.git
+cd lab_forticnapp_code_security
+```
 
 ---
 
@@ -90,33 +90,33 @@ This walkthrough demonstrates SAST findings using a vulnerable Python app.
 
 ### Code Example (Python)
 
-    ```python
-    # app/vuln_app.py
-    
-    import os
-    import sqlite3
-    import random
-    import hashlib
-    import pickle
-    
-    # ❌ Command injection
-    def list_files(user_input):
-        os.system(f"ls {user_input}")
-    
-    # ❌ SQL Injection
-    def get_user(username):
-        conn = sqlite3.connect('example.db')
-        cursor = conn.cursor()
-        cursor.execute("SELECT * FROM users WHERE name = '%s'" % username)
-        return cursor.fetchall()
-    
-    # ❌ Weak cryptography
-    def hash_password(password):
-        return hashlib.md5(password.encode()).hexdigest()
-    
-    if __name__ == "__main__":
-        print("Token:", generate_token())
-    ```
+```python
+# app/vuln_app.py
+
+import os
+import sqlite3
+import random
+import hashlib
+import pickle
+
+# ❌ Command injection
+def list_files(user_input):
+    os.system(f"ls {user_input}")
+
+# ❌ SQL Injection
+def get_user(username):
+    conn = sqlite3.connect('example.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM users WHERE name = '%s'" % username)
+    return cursor.fetchall()
+
+# ❌ Weak cryptography
+def hash_password(password):
+    return hashlib.md5(password.encode()).hexdigest()
+
+if __name__ == "__main__":
+    print("Token:", generate_token())
+```
 
 ---
 
@@ -132,9 +132,9 @@ Use the **Lacework CLI** to run a SAST scan locally.
 
 #### Run a Basic SAST + SCA Scan
 
-    ```bash
-    lacework sca scan ./app
-    ```
+```bash
+lacework sca scan ./app
+```
 
 This scans the `app/` directory for:
 
@@ -143,15 +143,15 @@ This scans the `app/` directory for:
 * 🔒 Secrets (if enabled)
 
 !!! note "Default Behavior"
-`--sast` is enabled by default. You can disable it with `--sast=false`.
+    `--sast` is enabled by default. You can disable it with `--sast=false`.
 
 ---
 
 #### Example with Output Formats
 
-    ```bash
-    lacework sca scan ./app --formats=lw-json,sarif,md-summary --output=./sca-results
-    ```
+```bash
+lacework sca scan ./app --formats=lw-json,sarif,md-summary --output=./sca-results
+```
 
 This produces:
 
@@ -163,20 +163,20 @@ This produces:
 
 #### Disable Secrets or License Checks (Optional)
 
-    ```bash
-    lacework sca scan ./app --secret=false --license-detection=false
-    ```
+```bash
+lacework sca scan ./app --secret=false --license-detection=false
+```
 
 ---
 
 #### Scan a GitHub Repo via URL
 
-    ```bash
-    lacework sca scan https://github.com/your-org/your-repo.git --basic-auth=git:your_token
-    ```
+```bash
+lacework sca scan https://github.com/your-org/your-repo.git --basic-auth=git:your_token
+```
 
 !!! warning "Git Auth Required"
-Use `--basic-auth`, `--ssh-auth`, or environment variables to authenticate when scanning remote Git URLs.
+    Use `--basic-auth`, `--ssh-auth`, or environment variables to authenticate when scanning remote Git URLs.
 
 ---
 
@@ -187,7 +187,7 @@ Use `--basic-auth`, `--ssh-auth`, or environment variables to authenticate when 
 * Apply **SmartFix** recommendations where available
 
 !!! tip "SmartFix in CLI"
-SCA findings include SmartFix upgrade suggestions in `lw-json` output and in the Lacework Console if `--save-results=true` is used.
+    SCA findings include SmartFix upgrade suggestions in `lw-json` output and in the Lacework Console if `--save-results=true` is used.
 
 ---
 

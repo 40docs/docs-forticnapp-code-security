@@ -124,10 +124,10 @@ Follow this quick lab to trigger misconfig findings and see FortiCNAPP in action
 
 ### Step 1: Clone the Lab Project
 
-    ```bash
-    git clone https://github.com/40docs/lab_forticnapp_code_security.git
-    cd lab_forticnapp_code_security
-    ```
+```bash
+git clone https://github.com/40docs/lab_forticnapp_code_security.git
+cd lab_forticnapp_code_security
+```
 
 This repo includes Terraform configs with real-world misconfigurations.
 
@@ -179,9 +179,9 @@ This repo includes Terraform configs with real-world misconfigurations.
 
 If you have the Lacework CLI:
 
-    ```bash
-    lacework iac scan ./terraform --output iac-results.json
-    ```
+```bash
+lacework iac scan ./terraform --output iac-results.json
+```
 
 !!! note "Configure API Access First"
     Run `lacework configure` before scanning to set up your account keys.
@@ -190,20 +190,19 @@ If you have the Lacework CLI:
 
 ### Sample Violations
 
-    ```hcl
-    # terraform/resource_aws_s3_bucket.tf
-    resource "aws_s3_bucket" "public_bucket" {
-      bucket = "lab-iac-demo-bucket"
-      acl    = "public-read"  # ❌
-    }
-    ```
-
-    ```hcl
-    # terraform/resource_aws_subnet.tf
-    resource "aws_subnet" "public" {
-      map_public_ip_on_launch = true  # ❌
-    }
-    ```
+```hcl
+# terraform/resource_aws_s3_bucket.tf
+resource "aws_s3_bucket" "public_bucket" {
+  bucket = "lab-iac-demo-bucket"
+  acl    = "public-read"  # ❌
+}
+```
+```hcl
+# terraform/resource_aws_subnet.tf
+resource "aws_subnet" "public" {
+  map_public_ip_on_launch = true  # ❌
+}
+```
 
 These trigger findings like:
 
