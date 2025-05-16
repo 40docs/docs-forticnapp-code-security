@@ -60,11 +60,11 @@ Not interested in following the full guide and just want a working demo?
 
 Clone it and run:
 
-    ```bash
-    git clone https://github.com/40docs/lab_forticnapp_opal.git
-    cd lab_forticnapp_opal/policies
-    lacework iac policy test -d opal/sample_custom_policy
-    ```
+```bash
+git clone https://github.com/40docs/lab_forticnapp_opal.git
+cd lab_forticnapp_opal/policies
+lacework iac policy test -d opal/sample_custom_policy
+```
 
 ## Setup
 
@@ -79,9 +79,9 @@ To begin using OPAL in FortiCNAPP, install the FortiCNAPP CLI and initialize a p
 
 ## 2. Start the Policy Wizard
 
-    ```bash
-    lacework iac policy create
-    ```
+```bash
+lacework iac policy create
+```
 
 Respond to prompts with:
 
@@ -101,46 +101,46 @@ Respond to prompts with:
 
 A directory structure like this is created:
 
-    ```text
-    ../policies/opal/sample_custom_policy/terraform/
-    ../policies/opal/sample_custom_policy/terraform/tests/
-    ```
+```text
+../policies/opal/sample_custom_policy/terraform/
+../policies/opal/sample_custom_policy/terraform/tests/
+```
 
 ## 3. Review `metadata.yaml`
 
 Located at:
 
-    ```text
-    ../policies/opal/sample_custom_policy/metadata.yaml
-    ```
+```text
+../policies/opal/sample_custom_policy/metadata.yaml
+```
 
 It includes:
 
-    ```yaml
-    category: logging
-    checkTool: opal
-    checkType: terraform
-    description: "example policy"
-    provider: aws
-    severity: medium
-    title: "Sample Custom Policy"
-    ```
+```yaml
+category: logging
+checkTool: opal
+checkType: terraform
+description: "example policy"
+provider: aws
+severity: medium
+title: "Sample Custom Policy"
+```
 
 ## 4. Add OPAL Policy Logic
 
 Edit `policy.rego`:
 
-    ```rego
-    package policies.sample_custom_policy
-    
-    input_type := "tf"
-    resource_type := "aws_s3_bucket"
-    default allow = false
-    
-    allow {
-      input.logging[_].target_bucket == "example"
-    }
-    ```
+```rego
+package policies.sample_custom_policy
+
+input_type := "tf"
+resource_type := "aws_s3_bucket"
+default allow = false
+
+allow {
+  input.logging[_].target_bucket == "example"
+}
+```
 
 ## Demo
 
@@ -152,46 +152,46 @@ Now that you've created your custom OPAL policy, test it with Terraform examples
 
 ### ✅ Passing Test
 
-    ```bash
-    mkdir -p ../policies/opal/sample_custom_policy/terraform/tests/pass
-    ```
+```bash
+mkdir -p ../policies/opal/sample_custom_policy/terraform/tests/pass
+```
 
 Create `main.tf`:
 
-    ```hcl
-    resource "aws_s3_bucket" "test" {
-      bucket = "test-bucket"
-      logging {
-        target_bucket = "example"
-      }
-    }
-    ```
+```hcl
+resource "aws_s3_bucket" "test" {
+  bucket = "test-bucket"
+  logging {
+    target_bucket = "example"
+  }
+}
+```
 
 ### ❌ Failing Test
 
-    ```bash
-    mkdir -p ../policies/opal/sample_custom_policy/terraform/tests/fail
-    ```
+```bash
+mkdir -p ../policies/opal/sample_custom_policy/terraform/tests/fail
+```
 
 Create `main.tf`:
 
-    ```hcl
-    resource "aws_s3_bucket" "test" {
-      bucket = "test-bucket"
-      logging {
-        target_bucket = "bad-example"
-      }
-    }
-    ```
+```hcl
+resource "aws_s3_bucket" "test" {
+  bucket = "test-bucket"
+  logging {
+    target_bucket = "bad-example"
+  }
+}
+```
 
 !!! note
     You can include either passing, failing, or both test types.
 
 ## 2. Run Policy Tests
 
-    ```bash
-    lacework iac policy test -d ../policies/opal/sample_custom_policy
-    ```
+```bash
+lacework iac policy test -d ../policies/opal/sample_custom_policy
+```
 
 Expected output includes test results for each `pass/` and `fail/` case.
 
@@ -199,21 +199,21 @@ Expected output includes test results for each `pass/` and `fail/` case.
 
 Add a print statement to your policy:
 
-    ```rego
-    print(sprintf("target_bucket: %s", [input.logging[_].target_bucket]))
-    ```
+```rego
+print(sprintf("target_bucket: %s", [input.logging[_].target_bucket]))
+```
 
 Output example:
 
-    ```json
-    "print_statements": [
-      {
-        "Message": "target_bucket: example",
-        "Line": 5,
-        "PolicyFile": "/path/to/policy.rego"
-      }
-    ]
-    ```
+```json
+"print_statements": [
+  {
+    "Message": "target_bucket: example",
+    "Line": 5,
+    "PolicyFile": "/path/to/policy.rego"
+  }
+]
+```
 
 !!! warning "Avoid Committing Prints"
     Do not commit print statements to version control.
@@ -222,9 +222,9 @@ Output example:
 
 You can package and upload your entire policies directory:
 
-    ```bash
-    lacework iac policy upload -d ../policies
-    ```
+```bash
+lacework iac policy upload -d ../policies
+```
 
 This will replace all existing custom policies.
 
@@ -232,9 +232,9 @@ This will replace all existing custom policies.
 
 Run an OPAL scan on any Terraform project:
 
-    ```bash
-    lacework iac tf-scan opal --disable-custom-policies=false -d path/to/project
-    ```
+```bash
+lacework iac tf-scan opal --disable-custom-policies=false -d path/to/project
+```
 
 !!! tip
     If `-d` is not provided, the current directory is used.
