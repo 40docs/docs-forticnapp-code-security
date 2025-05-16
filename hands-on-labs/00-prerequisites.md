@@ -1,6 +1,6 @@
 # Prerequisites
 
-Before you begin building and testing custom OPAL policies in FortiCNAPP, ensure the following prerequisites are met.
+Before you begin building and testing Code Security in FortiCNAPP, ensure the following prerequisites are met.
 
 ## Accounts and Access
 
