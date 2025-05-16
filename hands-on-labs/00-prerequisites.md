@@ -94,9 +94,9 @@ Before you begin building and testing Code Security in FortiCNAPP, ensure the fo
     $HOME/.lacework.toml
     ```
 
-    **To configure the Lacework FortiCNAPP CLI for IaC Security:**
+    **Install the Lacework FortiCNAPP CLI components for IAC and SCA:**
     1. Run `lacework component install iac` in the Lacework FortiCNAPP CLI.
-    2. The Lacework FortiCNAPP CLI is now configured for IaC. You can now run `lacework iac ....`
+    2. Run 'lacework component install sca` in the Lacework FortiCNAPP CLI.
 
 ## Environment
 
