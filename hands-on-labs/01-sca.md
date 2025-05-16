@@ -263,6 +263,7 @@ SmartFix analyzes vulnerable packages and evaluates future versions to determine
 
 !!! info "Prioritization Order"
     SmartFix evaluates upgrade options in this order:
+
     1. Minimal version with no vulnerabilities  
     2. Minimal version with no *critical* vulnerabilities  
     3. Maximal version with no vulnerabilities  
