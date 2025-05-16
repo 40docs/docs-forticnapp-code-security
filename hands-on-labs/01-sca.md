@@ -204,7 +204,6 @@ SCA license scanning results include:
     Package: lodash
     License: MIT
     Category: notice
-    Confidence: 99%
     ```
 
 ---
