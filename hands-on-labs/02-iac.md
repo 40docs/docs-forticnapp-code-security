@@ -19,7 +19,7 @@ Lacework FortiCNAPP's **IaC Security** statically analyzes cloud infrastructure 
 To get started, connect the **Code Security App** to your Git provider.
 
 !!! tip "Proactive IaC Security"
-Integrating early in the SDLC lets you catch cloud misconfigurations before runtime—shifting security left.
+    Integrating early in the SDLC lets you catch cloud misconfigurations before runtime—shifting security left.
 
 ---
 
@@ -31,7 +31,7 @@ Integrating early in the SDLC lets you catch cloud misconfigurations before runt
 * Authorized installation of the GitHub **Lacework IaC Security** App
 
 !!! note
-You can install the app directly via the [GitHub Marketplace](https://github.com/apps/iacbot).
+    You can install the app directly via the [GitHub Marketplace](https://github.com/apps/iacbot).
 
 ---
 
@@ -56,7 +56,7 @@ You can install the app directly via the [GitHub Marketplace](https://github.com
 7. Review permissions and accept the **Terms of Service**
 
 !!! success "You're Connected"
-Once installed, Lacework begins scanning supported IaC templates in your repo automatically.
+    Once installed, Lacework begins scanning supported IaC templates in your repo automatically.
 
 ---
 
@@ -73,7 +73,7 @@ Once installed, Lacework begins scanning supported IaC templates in your repo au
 | Terraform           | ✅                 | ✅     | ✅   |
 
 !!! note
-Support for Crossplane, Pulumi, Helmfile, and other formats may be added in future versions.
+    Support for Crossplane, Pulumi, Helmfile, and other formats may be added in future versions.
 
 ---
 
@@ -93,7 +93,7 @@ Support for Crossplane, Pulumi, Helmfile, and other formats may be added in futu
 ### Supported CI/CD Pipelines
 
 !!! note "Beta Feature"
-CI/CD support is in **beta** for select customers. Contact your Lacework representative for access.
+    CI/CD support is in **beta** for select customers. Contact your Lacework representative for access.
 
 | CI/CD Pipeline      | Supported |
 | ------------------- | --------- |
@@ -184,7 +184,7 @@ If you have the Lacework CLI:
     ```
 
 !!! note "Configure API Access First"
-Run `lacework configure` before scanning to set up your account keys.
+    Run `lacework configure` before scanning to set up your account keys.
 
 ---
 
