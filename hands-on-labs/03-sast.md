@@ -133,8 +133,16 @@ This walkthrough demonstrates SAST findings using a vulnerable Python app.
     ```
 
 !!! note "Trigger a Scan"
-    A Pull Request to the repo triggers a SAST scan automatically.
+    A Pull Request to the repo triggers a SAST scan automatically, within minutes a comment will be added to the PR.
 
+    ```bash
+    echo "paramiko==2.4.1" >> app/requirements.txt && \
+    git checkout -b trigger-smartfix && \
+    git add app/requirements.txt && \
+    git commit -m "Add vulnerable dep to trigger SmartFix" && \
+    git push -u origin trigger-smartfix && \
+    gh pr create --fill
+    ```
 ---
 
 ### Step 4: Apply Fixes
