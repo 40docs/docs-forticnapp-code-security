@@ -130,50 +130,12 @@ Free to use **without significant restriction**.
 
 ---
 
-### Configuring License Compliance Policies
+## License Compliance Configuration
 
-Lacework SCA uses a YAML config file to enforce license restrictions.
+You can enforce license compliance by defining your own policy rules using YAML.
 
-#### File Path
-
-```txt
-~/.config/lacework/components/sca/.lacework/codesec.yml
-```
-
-#### Example Config
-
-```yaml
-environments:
-  - name: default
-    licenses-not-allowed: []
-    license-categories-not-allowed: []
-
-  - name: demo
-    licenses-not-allowed: []
-    license-categories-not-allowed: [forbidden, restricted]
-```
-
-!!! tip "Customizing License Policies"
-    - Use `licenses-not-allowed` to block specific license names (e.g. `"GPL-3.0"`)
-    - Use `license-categories-not-allowed` to block entire groups like `"forbidden"` or `"restricted"`
-
----
-
-### Scanning with License Enforcement
-
-To scan a project using a specific license policy environment:
-
-```bash
-lacework sca dir . -o sca.json --pull-deps --env demo
-```
-
-#### Flags
-
-- `--env demo`: Uses the `demo` environment policy
-- `--pull-deps`: Ensures all dependencies are resolved
-- `-o sca.json`: Saves the output SBOM
-
----
+!!! note
+    For full instructions on creating and applying license policies, see the [Hands-On Labs → License Compliance](01-sca.md#configuring-license-compliance-policies).
 
 ### License Scanning Output
 
@@ -385,6 +347,51 @@ lacework sca scan ./ -f cdx-json -o sbom.json
     ```bash
     lacework sca scan ./ -f cdx-json -o sbom.json
     ```
+
+---
+
+### Configuring License Compliance Policies
+
+Lacework SCA uses a YAML config file to enforce license restrictions.
+
+#### File Path
+
+```txt
+~/.config/lacework/components/sca/.lacework/codesec.yml
+```
+
+#### Example Config
+
+```yaml
+environments:
+  - name: default
+    licenses-not-allowed: []
+    license-categories-not-allowed: []
+
+  - name: demo
+    licenses-not-allowed: []
+    license-categories-not-allowed: [forbidden, restricted]
+```
+
+!!! tip "Customizing License Policies"
+    - Use `licenses-not-allowed` to block specific license names (e.g. `"GPL-3.0"`)
+    - Use `license-categories-not-allowed` to block entire groups like `"forbidden"` or `"restricted"`
+
+---
+
+### Scanning with License Enforcement
+
+To scan a project using a specific license policy environment:
+
+```bash
+lacework sca dir . -o sca.json --pull-deps --env demo
+```
+
+#### Flags
+
+- `--env demo`: Uses the `demo` environment policy
+- `--pull-deps`: Ensures all dependencies are resolved
+- `-o sca.json`: Saves the output SBOM
 
 ---
 
