@@ -8,7 +8,7 @@ buttons:
       target: _blank
 ---
 
-# 📦 Software Composition Analysis (SCA)
+# Software Composition Analysis (SCA)
 
 Lacework FortiCNAPP's **Software Composition Analysis (SCA)** scans your project’s dependencies for **known vulnerabilities**, comparing them against trusted vulnerability databases. SCA also links out to third-party CVE descriptions, helping developers and security teams take informed action quickly.
 

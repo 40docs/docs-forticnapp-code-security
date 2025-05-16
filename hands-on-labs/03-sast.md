@@ -8,7 +8,7 @@ buttons:
       target: _blank
 ---
 
-# 🔎 Static Application Security Testing (SAST)
+# Static Application Security Testing (SAST)
 
 Lacework FortiCNAPP’s **SAST engine** analyzes application source code to detect insecure coding patterns, logic flaws, and potential injection points—before they reach runtime.
 

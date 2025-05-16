@@ -8,7 +8,7 @@ buttons:
       target: _blank
 ---
 
-# 🏗️ Infrastructure-as-Code (IaC) Security
+# Infrastructure-as-Code (IaC)
 
 Lacework FortiCNAPP's **IaC Security** statically analyzes cloud infrastructure templates like Terraform, CloudFormation, Kubernetes, and Dockerfiles to detect misconfigurations before deployment.
 
