@@ -14,6 +14,7 @@ Before you begin building and testing Code Security in FortiCNAPP, ensure the fo
 |-----------------|-----------------------------------------|
 | `lacework` CLI  | FortiCNAPP CLI with IaC component       |
 | `VS Code`       | Lacework Security VS Code Extension     |
+| `GitHub` CLI    | `gh` commands are included in the HoLs  |
 
 ??? tip "Install CLI"
 
