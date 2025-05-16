@@ -120,50 +120,74 @@ This walkthrough demonstrates SAST findings using a vulnerable Python app.
 
 ---
 
-### Step 3: Run a GitHub-Based Scan
+### Step 3: Run a SAST Scan via CLI
 
-1. Install the **Lacework FortiCNAPP GitHub App**
-2. Push the repo to GitHub
-3. Open a pull request
-4. FortiCNAPP will automatically comment with SAST results
+Use the **Lacework CLI** to run a SAST scan locally.
 
-    ```bash
-    git remote add origin https://github.com/40docs/lab_forticnapp_code_security.git
-    git push -u origin main
-    ```
+#### Requirements
 
-!!! note "Trigger a Scan"
-    A Pull Request to the repo triggers a SAST scan automatically, within minutes a comment will be added to the PR.
-
-    ```bash
-    echo "paramiko==2.4.1" >> app/requirements.txt && \
-    git checkout -b trigger-smartfix && \
-    git add app/requirements.txt && \
-    git commit -m "Add vulnerable dep to trigger SmartFix" && \
-    git push -u origin trigger-smartfix && \
-    gh pr create --fill
-    ```
----
-
-### Step 4: Apply Fixes
-
-You’ll receive:
-
-* ❌ Finding description
-* 📄 Affected file + line
-* 🧠 **SmartFix suggestion**
+* [Lacework CLI](00-prerequisites.md) installed and API Credentials configured
 
 ---
 
-## SAST Coverage Areas
+#### Run a Basic SAST + SCA Scan
 
-| Category            | Description                             |
-| ------------------- | --------------------------------------- |
-| Secrets Detection   | Hardcoded API keys, tokens, credentials |
-| Injection           | SQLi, OS commands, path traversal       |
-| Insecure Crypto     | MD5, SHA1, weak RNGs                    |
-| Dangerous Functions | `eval()`, `pickle.loads()`, shell exec  |
-| Access Control      | Exposure of privileged operations       |
+    ```bash
+    lacework sca scan ./app
+    ```
+
+This scans the `app/` directory for:
+
+* ❌ SAST issues (e.g., SQL injection, command injection, weak crypto)
+* 📦 Vulnerable dependencies (SCA)
+* 🔒 Secrets (if enabled)
+
+!!! note "Default Behavior"
+`--sast` is enabled by default. You can disable it with `--sast=false`.
+
+---
+
+#### Example with Output Formats
+
+    ```bash
+    lacework sca scan ./app --formats=lw-json,sarif,md-summary --output=./sca-results
+    ```
+
+This produces:
+
+* A **Lacework JSON** results file (`lw-json`)
+* A **SARIF** file for GitHub Code Scanning
+* A **Markdown summary** for CI logs or docs
+
+---
+
+#### Disable Secrets or License Checks (Optional)
+
+    ```bash
+    lacework sca scan ./app --secret=false --license-detection=false
+    ```
+
+---
+
+#### Scan a GitHub Repo via URL
+
+    ```bash
+    lacework sca scan https://github.com/your-org/your-repo.git --basic-auth=git:your_token
+    ```
+
+!!! warning "Git Auth Required"
+Use `--basic-auth`, `--ssh-auth`, or environment variables to authenticate when scanning remote Git URLs.
+
+---
+
+### After the Scan
+
+* Review CLI output or generated files
+* View line-level SAST issues and associated CVEs
+* Apply **SmartFix** recommendations where available
+
+!!! tip "SmartFix in CLI"
+SCA findings include SmartFix upgrade suggestions in `lw-json` output and in the Lacework Console if `--save-results=true` is used.
 
 ---
 

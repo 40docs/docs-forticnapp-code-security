@@ -358,14 +358,18 @@ This guided section helps you generate a vulnerable project, scan it, and see Sm
 
 To see SmartFix in GitHub:
 
+!!! note "Trigger a Scan"
+    A Pull Request to the repo triggers a SCA scan automatically, within minutes a comment will be added to the PR.
+
     ```bash
-    echo "# trigger" >> app/requirements.txt && \
+    echo "paramiko==2.4.1" >> app/requirements.txt && \
     git checkout -b trigger-smartfix && \
     git add app/requirements.txt && \
-    git commit -m "Trigger SmartFix" && \
+    git commit -m "Add vulnerable dep to trigger SmartFix" && \
     git push -u origin trigger-smartfix && \
     gh pr create --fill
     ```
+---
 
 !!! note "GitHub CLI Required"
     Ensure [GitHub CLI](https://cli.github.com/) is installed and authenticated to use `gh pr create`.
