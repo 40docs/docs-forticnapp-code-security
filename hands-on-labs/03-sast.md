@@ -21,8 +21,8 @@ SAST (Static Application Security Testing) reviews your code without executing i
 * ❌ Hardcoded secrets and credentials
 * ❌ Command and SQL injection
 * ❌ Insecure crypto usage
-* ❌ Deserialization vulnerabilities
 * ❌ Dangerous APIs (e.g., `eval`, `os.system`)
+* **ETC,**
 
 !!! tip "Shift Security Left"
     Lacework SAST integrates directly into GitHub, CI/CD, and VS Code, helping developers fix issues where they code.
