@@ -17,7 +17,7 @@ Lacework FortiCNAPP's **Software Composition Analysis (SCA)** scans your project
 
 ---
 
-## ✅ Supported Languages & Package Managers
+## Supported Languages & Package Managers
 
 Lacework FortiCNAPP SCA currently supports the following languages and associated file types:
 
@@ -38,11 +38,11 @@ Lacework FortiCNAPP SCA currently supports the following languages and associate
 
 ---
 
-### 🧾 SBOM Management
+### SBOM Management
 
 Lacework FortiCNAPP can generate **Software Bills of Materials (SBOMs)** to provide transparency into your dependency graph—useful for compliance and auditing.
 
-#### 🎛️ Supported SBOM Formats
+#### Supported SBOM Formats
 
 | **Format**      | **CLI Argument**     |
 |-----------------|----------------------|
@@ -54,7 +54,7 @@ Lacework FortiCNAPP can generate **Software Bills of Materials (SBOMs)** to prov
 
 ---
 
-### 🛠️ Generating an SBOM
+### Generating an SBOM
 
 To generate an SBOM for your project:
 
@@ -77,7 +77,7 @@ To generate an SBOM for your project:
 
 ---
 
-### 📚 Use Cases
+### Use Cases
 
 - ✅ Detect open-source vulnerabilities early in development.
 - ✅ Block high-severity CVEs in CI/CD pipelines.
@@ -85,7 +85,7 @@ To generate an SBOM for your project:
 
 ---
 
-## 📄 License Compliance
+## License Compliance
 
 Lacework FortiCNAPP’s **Software Composition Analysis (SCA)** includes built-in **license detection and compliance validation**. It scans third-party packages in your projects and identifies their associated licenses—classifying them by risk using Google's license classifier.
 
@@ -94,11 +94,11 @@ Lacework FortiCNAPP’s **Software Composition Analysis (SCA)** includes built-i
 
 ---
 
-### 🏷️ License Categories
+### License Categories
 
 Lacework classifies licenses into categories based on usage rights and restrictions. These categories are derived from Google’s [license classifier](https://opensource.google/documentation/reference/using-the-license-checker).
 
-#### 🔒 Forbidden
+#### Forbidden
 
 Licenses that **cannot be used** due to legal or policy restrictions.
 
@@ -106,7 +106,7 @@ Licenses that **cannot be used** due to legal or policy restrictions.
     Includes:
     `AGPL-3.0`
 
-#### ⚠️ Restricted
+#### Restricted
 
 Licenses that **require source distribution** or impose redistribution constraints.
 
@@ -114,7 +114,7 @@ Licenses that **require source distribution** or impose redistribution constrain
     Includes:
     `GPL-2.0`, `GPL-3.0`, `LGPL-2.1`, `Sleepycat`, `CC-BY-NC-*`, `Facebook-*`
 
-#### 🔁 Reciprocal
+#### Reciprocal
 
 Can be used freely **in unmodified form**, but may require derivative works to be open-sourced.
 
@@ -122,7 +122,7 @@ Can be used freely **in unmodified form**, but may require derivative works to b
     Includes:
     `EPL-1.0`, `CDDL-1.0`, `APSL-*`, `MPL-*`, `IPL-1.0`
 
-#### 📜 Notice
+#### Notice
 
 Permissive licenses that allow redistribution and modification with attribution.
 
@@ -130,7 +130,7 @@ Permissive licenses that allow redistribution and modification with attribution.
     Includes:
     `MIT`, `BSD-3-Clause`, `Apache-2.0`, `Zlib`, `Python-2.0`, `PHP-3.01`
 
-#### ✅ Unencumbered
+#### Unencumbered
 
 Free to use **without significant restriction**.
 
@@ -138,7 +138,7 @@ Free to use **without significant restriction**.
     Includes:
     `Unlicense`, `CC0-1.0`, `ZeroBSD`
 
-#### ⚙️ Other
+#### Other
 
 - **permissive (uncommon)** – Minimal conditions, rare usage
 - **unknown** – Undetermined license
@@ -146,17 +146,17 @@ Free to use **without significant restriction**.
 
 ---
 
-### ⚙️ Configuring License Compliance Policies
+### Configuring License Compliance Policies
 
 Lacework SCA uses a YAML config file to enforce license restrictions.
 
-#### 🛠️ File Path
+#### File Path
 
     ```txt
     ~/.config/lacework/components/sca/.lacework/codesec.yml
     ```
 
-#### 🧩 Example Config
+#### Example Config
 
     ```yaml
     environments:
@@ -175,7 +175,7 @@ Lacework SCA uses a YAML config file to enforce license restrictions.
 
 ---
 
-### 🏗️ Scanning with License Enforcement
+### Scanning with License Enforcement
 
 To scan a project using a specific license policy environment:
 
@@ -191,7 +191,7 @@ To scan a project using a specific license policy environment:
 
 ---
 
-### 📤 License Scanning Output
+### License Scanning Output
 
 SCA license scanning results include:
 
@@ -209,7 +209,7 @@ SCA license scanning results include:
 
 ---
 
-### ✅ Best Practices
+### Best Practices
 
 - 🔍 Audit dependencies regularly for restricted or unknown licenses
 - ⚙️ Integrate license policy config with version control
@@ -217,13 +217,13 @@ SCA license scanning results include:
 
 ---
 
-## 🧠 SmartFix
+## SmartFix
 
 **SmartFix** is Lacework FortiCNAPP's intelligent recommendation engine for resolving vulnerabilities detected during Software Composition Analysis (SCA). It delivers **actionable**, **conflict-free**, and **optimized** fixes directly within your development tools and workflows.
 
 ---
 
-### 🚀 Where SmartFix is Available
+### Where SmartFix is Available
 
 SmartFix is automatically enabled and integrated into the following environments:
 
@@ -237,7 +237,7 @@ SmartFix is automatically enabled and integrated into the following environments
 
 ---
 
-### 🧩 Key Features
+### Key Features
 
 | Feature                    | Description                                                                 |
 |----------------------------|-----------------------------------------------------------------------------|
@@ -247,11 +247,11 @@ SmartFix is automatically enabled and integrated into the following environments
 
 ---
 
-### 🔬 How SmartFix Works
+### How SmartFix Works
 
 SmartFix analyzes vulnerable packages and evaluates future versions to determine the best upgrade path using a prioritized strategy:
 
-#### 🧠 Recommendation Algorithms
+#### Recommendation Algorithms
 
 1. **Minimal Version with No Vulnerabilities**  
    - Smallest upgrade that fixes **all** known vulnerabilities.
@@ -271,7 +271,7 @@ SmartFix analyzes vulnerable packages and evaluates future versions to determine
 
 ---
 
-### 📖 Real-World Example
+### Real-World Example
 
 !!! example "Log4J Case"
     In early Log4J incidents, initial fixes introduced new CVEs.  
@@ -279,7 +279,7 @@ SmartFix analyzes vulnerable packages and evaluates future versions to determine
 
 ---
 
-### 💡 Benefits of SmartFix
+### Benefits of SmartFix
 
 | Benefit               | Description                                                                 |
 |-----------------------|-----------------------------------------------------------------------------|
@@ -289,7 +289,7 @@ SmartFix analyzes vulnerable packages and evaluates future versions to determine
 
 ---
 
-### 🛠️ Using SmartFix
+### Using SmartFix
 
 No special configuration is required. SmartFix is:
 
@@ -315,7 +315,7 @@ SmartFix is available in multiple developer-facing environments to provide remed
 
 ---
 
-### 🧪 Example CLI Usage
+### Example CLI Usage
 
     ```bash
     lacework sca scan ./ --output sca.json
@@ -329,7 +329,7 @@ This guided section helps you generate a vulnerable project, scan it, and see Sm
 
 ---
 
-### 🛠️ Step 1: Clone the Lab Project
+### Step 1: Clone the Lab Project
 
     ```bash
     git clone https://github.com/40docs/lab_forticnapp_code_security.git
@@ -338,7 +338,7 @@ This guided section helps you generate a vulnerable project, scan it, and see Sm
 
 ---
 
-### 💻 Step 2: Open in VS Code
+### Step 2: Open in VS Code
 
 1. Open the folder in **Visual Studio Code**
 2. Install the **Lacework Security** extension from the Marketplace
@@ -354,7 +354,7 @@ This guided section helps you generate a vulnerable project, scan it, and see Sm
 
 ---
 
-### 🔁 Step 3: Trigger a SmartFix via GitHub PR
+### Step 3: Trigger a SmartFix via GitHub PR
 
 To see SmartFix in GitHub:
 
@@ -374,7 +374,7 @@ This opens a pull request that triggers FortiCNAPP scanning and displays SmartFi
 
 ---
 
-### ✅ Step 4: View and Apply Fixes
+### Step 4: View and Apply Fixes
 
 1. Open the PR on GitHub
 2. Review SCA findings and SmartFix suggestions
@@ -382,7 +382,7 @@ This opens a pull request that triggers FortiCNAPP scanning and displays SmartFi
 
 ---
 
-### 📎 Related CLI Example
+### Related CLI Example
 
 Run a scan and generate SmartFix recommendations via CLI:
 

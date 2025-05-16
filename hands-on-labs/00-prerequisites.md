@@ -2,13 +2,13 @@
 
 Before you begin building and testing custom OPAL policies in FortiCNAPP, ensure the following prerequisites are met.
 
-## 🧾 Accounts and Access
+## Accounts and Access
 
 !!! note "FortiCNAPP Access"
     - A valid **FortiCNAPP (formerly Lacework)** account  
     - API **Key** and **Secret** with IaC Policy permissions
 
-## 🛠 Required Tools
+## Required Tools
 
 | Tool            | Description                             |
 |-----------------|-----------------------------------------|
@@ -98,12 +98,12 @@ Before you begin building and testing custom OPAL policies in FortiCNAPP, ensure
     1. Run `lacework component install iac` in the Lacework FortiCNAPP CLI.
     2. The Lacework FortiCNAPP CLI is now configured for IaC. You can now run `lacework iac ....`
 
-## 💻 Environment
+## Environment
 
 - Unix-based terminal (macOS, Linux, or WSL on Windows)
 - Internet connection (for policy downloads)
 
-## 🔧 Optional Tools
+## Optional Tools
 
 !!! info "Recommended Tools"
     - `tree`: To view directory structures

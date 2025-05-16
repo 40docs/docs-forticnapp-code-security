@@ -14,7 +14,7 @@ Lacework FortiCNAPP’s **SAST engine** analyzes application source code to dete
 
 ---
 
-## 🚀 What Is SAST?
+## What Is SAST?
 
 SAST (Static Application Security Testing) reviews your code without executing it, scanning for:
 
@@ -29,7 +29,7 @@ SAST (Static Application Security Testing) reviews your code without executing i
 
 ---
 
-## ✅ Supported Languages
+## Supported Languages
 
 | Language   | File Types                   | Scan Modes     |
 | ---------- | ---------------------------- | -------------- |
@@ -44,7 +44,7 @@ SAST (Static Application Security Testing) reviews your code without executing i
 
 ---
 
-## 🔗 Integration Options
+## Integration Options
 
 ### SCMs
 
@@ -59,13 +59,13 @@ SAST (Static Application Security Testing) reviews your code without executing i
 
 ---
 
-## 🧪 Hands-On: Run a SAST Demo with Python
+## Hands-On
 
 This walkthrough demonstrates SAST findings using a vulnerable Python app.
 
 ---
 
-### 🛠️ Step 1: Clone the Demo Repo
+### Step 1: Clone the Demo Repo
 
     ```bash
     git clone https://github.com/40docs/lab_forticnapp_code_security.git
@@ -74,7 +74,7 @@ This walkthrough demonstrates SAST findings using a vulnerable Python app.
 
 ---
 
-### 🧑‍💻 Step 2: Open in VS Code
+### Step 2: Open in VS Code
 
 1. Launch **Visual Studio Code**
 2. Open the project folder
@@ -88,7 +88,7 @@ This walkthrough demonstrates SAST findings using a vulnerable Python app.
 
 ---
 
-### 📌 Code Example (Python)
+### Code Example (Python)
 
     ```python
     # app/vuln_app.py
@@ -120,7 +120,7 @@ This walkthrough demonstrates SAST findings using a vulnerable Python app.
 
 ---
 
-### 🔗 Step 3: Run a GitHub-Based Scan
+### Step 3: Run a GitHub-Based Scan
 
 1. Install the **Lacework FortiCNAPP GitHub App**
 2. Push the repo to GitHub
@@ -137,7 +137,7 @@ This walkthrough demonstrates SAST findings using a vulnerable Python app.
 
 ---
 
-### ✅ Step 4: Apply Fixes
+### Step 4: Apply Fixes
 
 You’ll receive:
 
@@ -149,7 +149,7 @@ Apply the fix manually or in VS Code with 1 click (if available).
 
 ---
 
-## 🧠 SAST Coverage Areas
+## SAST Coverage Areas
 
 | Category            | Description                             |
 | ------------------- | --------------------------------------- |
@@ -161,7 +161,7 @@ Apply the fix manually or in VS Code with 1 click (if available).
 
 ---
 
-## ✅ Best Practices
+## Best Practices
 
 * ✅ Run SAST in PRs and local development
 * ✅ Use branch protection + FortiCNAPP checks to block unsafe merges

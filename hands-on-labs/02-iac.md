@@ -14,7 +14,7 @@ Lacework FortiCNAPP's **IaC Security** statically analyzes cloud infrastructure 
 
 ---
 
-## 🚀 Getting Started with IaC Security
+## Getting Started with IaC Security
 
 To get started, connect the **Code Security App** to your Git provider.
 
@@ -23,9 +23,9 @@ Integrating early in the SDLC lets you catch cloud misconfigurations before runt
 
 ---
 
-## 🔗 GitHub Integration
+## GitHub Integration
 
-### ✅ Prerequisites
+### Prerequisites
 
 * **Admin access** to all repositories you plan to monitor
 * Authorized installation of the GitHub **Lacework IaC Security** App
@@ -35,7 +35,7 @@ You can install the app directly via the [GitHub Marketplace](https://github.com
 
 ---
 
-### 🔐 Verifying Permissions
+### Verifying Permissions
 
 1. Go to GitHub → **Settings → Applications**
 2. Under **Authorized OAuth Apps**, select **Lacework IaC Security**
@@ -45,7 +45,7 @@ You can install the app directly via the [GitHub Marketplace](https://github.com
 
 ---
 
-### ⚙️ Configuring the GitHub Integration
+### Configuring the GitHub Integration
 
 1. Navigate to the **Lacework FortiCNAPP Console → IaC Security**
 2. Select **GitHub** as your provider
@@ -60,9 +60,9 @@ Once installed, Lacework begins scanning supported IaC templates in your repo au
 
 ---
 
-## 📚 Supported IaC Technologies
+## Supported IaC Technologies
 
-### 🧩 Supported Languages & File Types
+### Supported Languages & File Types
 
 | **Language / Tool** | Code Security App | CI/CD | CLI |
 | ------------------- | ----------------- | ----- | --- |
@@ -77,7 +77,7 @@ Support for Crossplane, Pulumi, Helmfile, and other formats may be added in futu
 
 ---
 
-### 🌐 Supported Git Providers
+### Supported Git Providers
 
 | Git Provider        | Supported |
 | ------------------- | --------- |
@@ -90,7 +90,7 @@ Support for Crossplane, Pulumi, Helmfile, and other formats may be added in futu
 
 ---
 
-### 🔧 Supported CI/CD Pipelines
+### Supported CI/CD Pipelines
 
 !!! note "Beta Feature"
 CI/CD support is in **beta** for select customers. Contact your Lacework representative for access.
@@ -104,7 +104,7 @@ CI/CD support is in **beta** for select customers. Contact your Lacework represe
 
 ---
 
-### ⚙️ Supported Terraform Tools
+### Supported Terraform Tools
 
 | Terraform Tool       | Supported |
 | -------------------- | --------- |
@@ -116,13 +116,13 @@ CI/CD support is in **beta** for select customers. Contact your Lacework represe
 
 ---
 
-## 🧪 Hands-On
+## Hands-On
 
 Follow this quick lab to trigger misconfig findings and see FortiCNAPP in action.
 
 ---
 
-### 🛠️ Step 1: Clone the Lab Project
+### Step 1: Clone the Lab Project
 
     ```bash
     git clone https://github.com/40docs/lab_forticnapp_code_security.git
@@ -133,7 +133,7 @@ This repo includes Terraform configs with real-world misconfigurations.
 
 ---
 
-### 🔗 Step 2: Install the GitHub App
+### Step 2: Install the GitHub App
 
 1. Go to [https://github.com/apps/iacbot](https://github.com/apps/iacbot)
 2. Click **Configure**
@@ -146,7 +146,7 @@ This repo includes Terraform configs with real-world misconfigurations.
 
 ---
 
-### 🔍 Step 3: View IaC Scan Results
+### Step 3: View IaC Scan Results
 
 1. Open the **Lacework Console → Code Security → Repositories**
 2. Click your repo to see:
@@ -160,7 +160,7 @@ This repo includes Terraform configs with real-world misconfigurations.
 
 ---
 
-### ✅ Step 4: Enforce Checks with Branch Protection
+### Step 4: Enforce Checks with Branch Protection
 
 1. In your repo, go to **Settings → Branches**
 2. Edit or create a rule for `main`
@@ -175,7 +175,7 @@ This repo includes Terraform configs with real-world misconfigurations.
 
 ---
 
-### 🔧 Optional: Scan Locally with the CLI
+### Optional: Scan Locally with the CLI
 
 If you have the Lacework CLI:
 
@@ -188,7 +188,7 @@ Run `lacework configure` before scanning to set up your account keys.
 
 ---
 
-### 📌 Sample Violations
+### Sample Violations
 
     ```hcl
     # terraform/resource_aws_s3_bucket.tf
@@ -212,7 +212,7 @@ These trigger findings like:
 
 ---
 
-## ✅ Best Practices
+## Best Practices
 
 * ✅ Install the GitHub App to enable automated scans
 * ✅ Use branch protection to enforce security gates

@@ -14,7 +14,7 @@ Welcome to the FortiCNAPP OPAL Lab. This guide walks you through building, testi
 
 ---
 
-## 🔍 Opal Overview
+## Opal Overview
 
 OPAL is FortiCNAPP’s infrastructure-as-code (IaC) static analyzer based on the **OPA** framework and **Rego** language. It evaluates AWS, Azure, GCP, and Kubernetes configurations for potential security and compliance violations **before deployment**.
 
@@ -30,7 +30,7 @@ You can create custom OPAL policies in Rego and scan your IaC with them using th
 
 OPAL supports CI/CD tools such as **Jenkins**, **CircleCI**, and **AWS CodePipeline** via the Lacework FortiCNAPP CLI.
 
-### 🧠 How It Works
+### How It Works
 
 - Converts your IaC into a normalized data structure
 - Evaluates that structure against custom Rego policies
@@ -40,7 +40,7 @@ OPAL supports CI/CD tools such as **Jenkins**, **CircleCI**, and **AWS CodePipel
 
 ---
 
-## 🧪 What You'll Learn
+## What You'll Learn
 
 - How to install and configure the FortiCNAPP CLI
 - How to generate a custom OPAL policy with tests
@@ -49,7 +49,7 @@ OPAL supports CI/CD tools such as **Jenkins**, **CircleCI**, and **AWS CodePipel
 
 ---
 
-## 🚀 Fast-Forward: Pressed on Time? Try This
+## Fast-Forward: Pressed on Time? Try This
 
 Not interested in following the full guide and just want a working demo?
 
