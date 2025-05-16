@@ -21,7 +21,7 @@ Before you begin building and testing Code Security in FortiCNAPP, ensure the fo
      **Bash (macOS/Linux)**
 
     ```bash
-    curl https://raw.githubusercontent.com/lacework/go-sdk/main/cli/install.sh | bash
+    curl https://raw.githubusercontent.com/lacework/go-sdk/main/cli/install.sh | sudo bash
     ```
     
     **Powershell (Windows)**
