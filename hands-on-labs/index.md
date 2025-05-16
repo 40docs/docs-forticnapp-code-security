@@ -31,7 +31,7 @@ This guide is intended for **developers, DevOps, and security engineers** managi
 | Windows           | ❌ No      |
 | macOS             | ✅ Yes     |
 
-### IDE Support (VS Code, IntelliJ)
+### IDE Support (VS Code)
 
 | IDE       | IaC | SCA | SAST |
 |-----------|-----|-----|------|
