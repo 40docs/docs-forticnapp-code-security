@@ -98,6 +98,22 @@ Before you begin building and testing Code Security in FortiCNAPP, ensure the fo
     1. Run `lacework component install iac` in the Lacework FortiCNAPP CLI.
     2. Run 'lacework component install sca` in the Lacework FortiCNAPP CLI.
 
+??? tip "Configure the Lacework VSCode extension"
+
+    **Open VSCode**
+    
+    1. Install the **Lacework Security** extension from the Marketplace
+    
+       ![Lacework Security Extension](images/vscode1.png)
+    
+    2. Click the **Lacework shield icon** in the sidebar
+    
+       ![VS Code Settings](images/vscode2.png)
+    
+    3. In the search bag, type `ext:lacework-security.lacework` and fill-in the API tokens from [Prerequisites](00-prerequisites.md#required-tools) in `configure your API key`.
+    
+       ![Extension Configuration](images/vscode3.png)
+
 ## Environment
 
 - Unix-based terminal (macOS, Linux, or WSL on Windows)
