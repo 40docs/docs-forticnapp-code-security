@@ -122,10 +122,10 @@ Follow this quick lab to trigger misconfig findings and see FortiCNAPP in action
 
 ---
 
-### Step 1: Clone the Lab Project
+### Step 1: Create a New Project from the Template
 
 ```bash
-git clone https://github.com/40docs/lab_forticnapp_code_security.git
+gh repo lab_forticnapp_code_security --template 40docs/lab_forticnapp_code_security --public
 cd lab_forticnapp_code_security
 ```
 
@@ -197,6 +197,7 @@ resource "aws_s3_bucket" "public_bucket" {
   acl    = "public-read"  # ❌
 }
 ```
+
 ```hcl
 # terraform/resource_aws_subnet.tf
 resource "aws_subnet" "public" {

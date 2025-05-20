@@ -65,10 +65,10 @@ This walkthrough demonstrates SAST findings using a vulnerable Python app.
 
 ---
 
-### Step 1: Clone the Demo Repo
+### Step 1: Create a New Project from the Template
 
 ```bash
-git clone https://github.com/40docs/lab_forticnapp_code_security.git
+gh repo lab_forticnapp_code_security --template 40docs/lab_forticnapp_code_security --public
 cd lab_forticnapp_code_security
 ```
 

@@ -61,7 +61,7 @@ Not interested in following the full guide and just want a working demo?
 Clone it and run:
 
 ```bash
-git clone https://github.com/40docs/lab_forticnapp_opal.git
+gh repo lab_forticnapp_opal --template 40docs/lab_forticnapp_opal.git
 cd lab_forticnapp_opal/policies
 lacework iac policy test -d opal/sample_custom_policy
 ```
