@@ -125,7 +125,7 @@ Follow this quick lab to trigger misconfig findings and see FortiCNAPP in action
 ### Step 1: Create a New Project from the Template
 
 ```bash
-gh repo lab_forticnapp_code_security --template 40docs/lab_forticnapp_code_security --public
+gh repo create lab_forticnapp_code_security --template 40docs/lab_forticnapp_code_security --public
 cd lab_forticnapp_code_security
 ```
 

@@ -273,7 +273,7 @@ This guided section helps you generate a vulnerable project, scan it, and see Sm
 ### Step 1: Create a New Project from the Template
 
 ```bash
-gh repo lab_forticnapp_code_security --template 40docs/lab_forticnapp_code_security --public
+gh repo create lab_forticnapp_code_security --template 40docs/lab_forticnapp_code_security --public
 cd lab_forticnapp_code_security
 ```
 
