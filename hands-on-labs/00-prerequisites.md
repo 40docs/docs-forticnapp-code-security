@@ -1,11 +1,11 @@
 # Prerequisites
 
-Before you begin building and testing Code Security in FortiCNAPP, ensure the following prerequisites are met.
+Before you begin building and testing Code Security in **Lacework FortiCNAPP**, ensure the following prerequisites are met.
 
 ## Accounts and Access
 
-!!! note "FortiCNAPP Access"
-    - A valid **FortiCNAPP (formerly Lacework)** account  
+!!! note "**Lacework FortiCNAPP** Access"
+    - A valid **Lacework FortiCNAPP**  account  
     - API **Key** and **Secret** with IaC Policy permissions
 
 ## Required Tools
@@ -45,9 +45,9 @@ Before you begin building and testing Code Security in FortiCNAPP, ensure the fo
 
 ??? tip "Configure your API Key"
 
-    The FortiCNAPP CLI requires an API key and secret to authenticate.
+    The  Lacework FortiCNAPP CLI requires an API key and secret to authenticate.
     
-    1. Log in to the **FortiCNAPP Console**
+    1. Log in to the **Lacework FortiCNAPP** Console
     2. Navigate to **Settings > API keys**
     3. Click **Add New**
     4. Provide a name and optional description
@@ -94,7 +94,10 @@ Before you begin building and testing Code Security in FortiCNAPP, ensure the fo
     $HOME/.lacework.toml
     ```
 
+??? danger "Don't Forget to Install Lacework CLI Components"
+
     **Install the Lacework FortiCNAPP CLI components for IAC and SCA:**
+    
     1. Run `lacework component install iac` in the Lacework FortiCNAPP CLI.
     2. Run 'lacework component install sca` in the Lacework FortiCNAPP CLI.
 
