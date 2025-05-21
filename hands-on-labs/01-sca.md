@@ -377,7 +377,7 @@ environments:
 
 ### Scanning with License Enforcement
 
-To scan a project using a specific license policy environment:
+To scan a project against license policy:
 
 ```bash
 lacework sca scan . -o sca.json
