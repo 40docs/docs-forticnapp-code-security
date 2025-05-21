@@ -331,28 +331,41 @@ This opens a pull request that triggers FortiCNAPP scanning and displays SmartFi
 
 To generate an SBOM for your project:
 
-=== "Command"
+\=== "Command"
 
 ```bash
-lacework sca scan ./ -f cdx-json -o sbom.json
+lacework sca scan ./ -o scan_results.json
 ```
 
-=== "Flags"
+\=== "Flags"
 
-- `-f`: Specifies the format of the SBOM (e.g., `cdx-json` for CycloneDX).
-- `-o`: Specifies the output file name and path.
+* `-o`: Specifies the output file name and path.
+* `-f` / `--formats`: Specifies the format of the SBOM (default is `lw-json`).
 
-!!! example "CycloneDX JSON Output"
-    To generate a CycloneDX SBOM in JSON format:
+!!! warning "Required Format for SBOM Analysis"
+    To analyze the SBOM later using `lacework sca sbom`, you **must generate it in the default `lw-json` format**:
+
     ```bash
-    lacework sca scan ./ -f cdx-json -o sbom.json
+    lacework sca scan ./ -o scan_results.json
     ```
+
+SBOMs in other formats (e.g., `cdx-json`, `spdx-json`) **will not work** with the `sca sbom` command.
+
+---
+
+To parse through your scan results and extract just the SBOM:
+
+```bash
+lacework sca sbom scan_results.json -o sbom.json
+```
+
+Your `sbom.json` will contain only the SBOM data.
 
 ---
 
 ### Configuring License Compliance Policies
 
-Lacework SCA uses a YAML config file to enforce license restrictions.
+Lacework SCA uses a YAML configuration file to enforce license restrictions.
 
 #### File Path
 
@@ -370,26 +383,41 @@ environments:
 ```
 
 !!! tip "Customizing License Policies"
-    - Use `licenses-not-allowed` to block specific license names (e.g. `"GPL-3.0"`)
-    - Use `license-categories-not-allowed` to block entire groups like `"forbidden"` or `"restricted"`
+    - Use `licenses-not-allowed` to block specific license names (e.g., `"GPL-3.0"`).
+    - Use `license-categories-not-allowed` to block entire groups like `"forbidden"` or `"restricted"`.
 
 ---
 
 ### Scanning with License Enforcement
 
-To scan a project against license policy:
+To evaluate a previously generated SBOM against your license policies:
 
 ```bash
-lacework sca sbom . -f cdx-json -o sca.json
+lacework sca sbom sbom.json
 ```
 
-#### Flags
+#### Notes
 
-- `-o sca.json`: Saves the output SBOM to a file
+* This command only works with files generated using the `lw-json` format from `lacework sca scan`.
+* It applies any license compliance settings found in `.lacework/sca.config.yaml`.
 
 ---
 
-### Related CLI Example
+### Optional: Export to Other SBOM Formats
 
-!!! info "SBOM"
-    If you include `--formats cdx-json` or similar, the scan will also produce the Software Bill of Materials (SBOM) in `CycloneDx` json format.
+If you're using other tools that require standard SBOM formats like CycloneDX or SPDX, you can generate them like this:
+
+\=== "Command"
+
+```bash
+lacework sca scan ./ -f cdx-json -o sbom.json
+```
+
+\=== "Flags"
+
+* `-f cdx-json`: Specifies the output format (e.g., CycloneDX JSON).
+* `-o sbom.json`: Specifies the SBOM output file.
+
+!!! info "External Use Only"
+    SBOMs in formats like `cdx-json`, `spdx-json`, or `sarif` are intended for use with external tools.
+    These **cannot be used with `lacework sca sbom`** for license policy enforcement.
