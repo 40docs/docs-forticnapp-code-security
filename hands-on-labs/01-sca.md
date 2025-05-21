@@ -357,7 +357,7 @@ Lacework SCA uses a YAML config file to enforce license restrictions.
 #### File Path
 
 ```txt
-~/.config/lacework/components/sca/.lacework/codesec.yml
+~/.config/lacework/components/sca/.lacework/sca.config.yaml
 ```
 
 #### Example Config
@@ -365,10 +365,6 @@ Lacework SCA uses a YAML config file to enforce license restrictions.
 ```yaml
 environments:
   - name: default
-    licenses-not-allowed: []
-    license-categories-not-allowed: []
-
-  - name: demo
     licenses-not-allowed: []
     license-categories-not-allowed: [forbidden, restricted]
 ```
@@ -384,7 +380,7 @@ environments:
 To scan a project using a specific license policy environment:
 
 ```bash
-lacework sca dir . -o sca.json --pull-deps --env demo
+lacework sca scan . -o sca.json
 ```
 
 #### Flags
