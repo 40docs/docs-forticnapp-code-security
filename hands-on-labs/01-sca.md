@@ -385,8 +385,6 @@ lacework sca scan . -o sca.json
 
 #### Flags
 
-- `--env demo`: Uses the `demo` environment policy
-- `--pull-deps`: Ensures all dependencies are resolved
 - `-o sca.json`: Saves the output SBOM
 
 ---
