@@ -331,16 +331,16 @@ This opens a pull request that triggers FortiCNAPP scanning and displays SmartFi
 
 To generate an SBOM for your project:
 
-\=== "Command"
+=== "Command"
 
-```bash
-lacework sca scan ./ -o scan_results.json
-```
+    ```bash
+    lacework sca scan ./ -o scan_results.json
+    ```
 
-\=== "Flags"
+=== "Flags"
 
-* `-o`: Specifies the output file name and path.
-* `-f` / `--formats`: Specifies the format of the SBOM (default is `lw-json`).
+    * `-o`: Specifies the output file name and path.
+    * `-f` / `--formats`: Specifies the format of the SBOM (default is `lw-json`).
 
 !!! warning "Required Format for SBOM Analysis"
     To analyze the SBOM later using `lacework sca sbom`, you **must generate it in the default `lw-json` format**:
@@ -407,16 +407,16 @@ lacework sca sbom sbom.json
 
 If you're using other tools that require standard SBOM formats like CycloneDX or SPDX, you can generate them like this:
 
-\=== "Command"
+=== "Command"
 
-```bash
-lacework sca scan ./ -f cdx-json -o sbom.json
-```
+    ```bash
+    lacework sca scan ./ -f cdx-json -o sbom.json
+    ```
 
-\=== "Flags"
+=== "Flags"
 
-* `-f cdx-json`: Specifies the output format (e.g., CycloneDX JSON).
-* `-o sbom.json`: Specifies the SBOM output file.
+    * `-f cdx-json`: Specifies the output format (e.g., CycloneDX JSON).
+    * `-o sbom.json`: Specifies the SBOM output file.
 
 !!! info "External Use Only"
     SBOMs in formats like `cdx-json`, `spdx-json`, or `sarif` are intended for use with external tools.
