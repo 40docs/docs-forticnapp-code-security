@@ -99,7 +99,7 @@ Before you begin building and testing Code Security in **Lacework FortiCNAPP**, 
     **Install the Lacework FortiCNAPP CLI components for IAC and SCA:**
     
     1. Run `lacework component install iac` in the Lacework FortiCNAPP CLI.
-    2. Run 'lacework component install sca` in the Lacework FortiCNAPP CLI.
+    2. Run `lacework component install sca` in the Lacework FortiCNAPP CLI.
 
 ??? tip "Configure the Lacework VSCode extension"
 

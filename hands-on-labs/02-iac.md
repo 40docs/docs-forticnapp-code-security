@@ -180,7 +180,7 @@ This repo includes Terraform configs with real-world misconfigurations.
 If you have the Lacework CLI:
 
 ```bash
-lacework iac scan ./terraform --output iac-results.json
+lacework iac scan --directory ./terraform --output iac-results.json
 ```
 
 !!! note "Configure API Access First"
