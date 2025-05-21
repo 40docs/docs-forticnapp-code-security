@@ -391,11 +391,5 @@ lacework sca scan . -o sca.json
 
 ### Related CLI Example
 
-Run a scan and generate SmartFix recommendations via CLI:
-
-```bash
-lacework sca scan ./app --output sca-results.json
-```
-
-!!! info "SBOM + SmartFix"
-    If you include `--formats cdx-json` or similar, the scan will also produce a Software Bill of Materials (SBOM) alongside vulnerability results.
+!!! info "SBOM"
+    If you include `--formats cdx-json` or similar, the scan will also produce the Software Bill of Materials (SBOM) in `CycloneDx` json format.
