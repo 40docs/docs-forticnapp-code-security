@@ -380,12 +380,12 @@ environments:
 To scan a project against license policy:
 
 ```bash
-lacework sca scan . -o sca.json
+lacework sca sbom . -f cdx-json -o sca.json
 ```
 
 #### Flags
 
-- `-o sca.json`: Saves the output SBOM
+- `-o sca.json`: Saves the output SBOM to a file
 
 ---
 
