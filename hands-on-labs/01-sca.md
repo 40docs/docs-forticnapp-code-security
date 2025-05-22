@@ -175,7 +175,6 @@ SmartFix is automatically enabled and integrated into the following environments
 - ✅ **Lacework FortiCNAPP UI** (via the SCA findings panel)
 - ✅ **SCM integrations** (e.g., GitHub PR comments)
 - ✅ **Lacework CLI scans**
-- ✅ **Supported IDEs** (e.g., VS Code)
 
 !!! tip
     SmartFix runs automatically during SCA scans and does not require separate activation or configuration.
@@ -329,18 +328,18 @@ This opens a pull request that triggers FortiCNAPP scanning and displays SmartFi
 
 ### SBOM Generation
 
-To generate an SBOM for your project:
+!!! example "Generate an SBOM for your project"
 
-=== "Command"
-
-    ```bash
-    lacework sca scan ./ -o scan_results.json
-    ```
-
-=== "Flags"
-
-    * `-o`: Specifies the output file name and path.
-    * `-f` / `--formats`: Specifies the format of the SBOM (default is `lw-json`).
+    === "Command"
+    
+        ```bash
+        lacework sca scan ./ -o scan_results.json
+        ```
+    
+    === "Flags"
+    
+        * `-o`: Specifies the output file name and path.
+        * `-f` / `--formats`: Specifies the format of the SBOM (default is `lw-json`).
 
 !!! warning "Required Format for SBOM Analysis"
     To analyze the SBOM later using `lacework sca sbom`, you **must generate it in the default `lw-json` format**:
