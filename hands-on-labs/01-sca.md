@@ -273,7 +273,7 @@ cd lab_forticnapp_code_security
 
 ### Step 2: Open in VSCode
 
-![Start Scan](images/vscode4.png){align=left width=300}
+![Start Scan](images/vscode4.png){align=left width=350}
 
 1. Open the folder in **Visual Studio Code**
 2. If not installed and configured as a part of `Prerequisites` then please follow the steps in: [Prerequisites](00-prerequisites.md#required-tools) in `Configure the Lacework VSCode Extension`
