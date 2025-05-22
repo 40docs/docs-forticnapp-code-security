@@ -293,7 +293,7 @@ To see SmartFix in GitHub:
 
 !!! note "Trigger a Scan"
 
-    ![Lacework_Bot](images/github1.PNG){align=left width=350}
+    ![Lacework_Bot](images/github1.PNG){align=left width=325}
 
     A Pull Request to the repo triggers a SCA scan automatically, within minutes a comment will be added to the PR.
 
