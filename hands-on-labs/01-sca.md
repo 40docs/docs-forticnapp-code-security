@@ -308,9 +308,9 @@ To see SmartFix in GitHub:
 ---
 
 !!! note "GitHub CLI Required"
-    Ensure [GitHub CLI](https://cli.github.com/) is installed and authenticated to use `gh pr create`.
+    - Ensure [GitHub CLI](https://cli.github.com/) is installed and authenticated to use `gh pr create`.
 
-This opens a pull request that triggers FortiCNAPP scanning and displays SmartFix suggestions as inline PR comments or in the Lacework UI.
+    - This opens a pull request that triggers FortiCNAPP scanning and displays SmartFix suggestions as inline PR comments or in the Lacework UI. **Note** that the SmartFix recommendations are solely for new vulnerabilities that are introduced as a result of that PR, and not inclusive of all vulnerabilities within the `Files changed`.
 
 ---
 
