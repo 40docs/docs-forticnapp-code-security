@@ -273,7 +273,7 @@ cd lab_forticnapp_code_security
 
 ### Step 2: Open in VSCode
 
-![Start Scan](images/vscode4.png){align=left width=350}
+![Start Scan](images/vscode4.png){align=left width=325}
 
 1. Open the folder in **Visual Studio Code**
 2. If not installed and configured as a part of `Prerequisites` then please follow the steps in: [Prerequisites](00-prerequisites.md#required-tools) in `Configure the Lacework VSCode Extension`
@@ -292,6 +292,9 @@ cd lab_forticnapp_code_security
 To see SmartFix in GitHub:
 
 !!! note "Trigger a Scan"
+
+    ![Lacework_Bot](images/github1.PNG){align=left width=300}
+
     A Pull Request to the repo triggers a SCA scan automatically, within minutes a comment will be added to the PR.
 
     ```bash
