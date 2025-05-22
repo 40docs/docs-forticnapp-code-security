@@ -86,7 +86,7 @@ Lacework classifies licenses into categories based on usage rights and restricti
 
 Licenses that **cannot be used** due to legal or policy restrictions.
 
-!!! danger
+!!! danger "Forbidden"
     Includes:
     `AGPL-3.0`
 
@@ -94,7 +94,7 @@ Licenses that **cannot be used** due to legal or policy restrictions.
 
 Licenses that **require source distribution** or impose redistribution constraints.
 
-!!! warning
+!!! warning "Restricted"
     Includes:
     `GPL-2.0`, `GPL-3.0`, `LGPL-2.1`, `Sleepycat`, `CC-BY-NC-*`, `Facebook-*`
 
@@ -102,7 +102,7 @@ Licenses that **require source distribution** or impose redistribution constrain
 
 Can be used freely **in unmodified form**, but may require derivative works to be open-sourced.
 
-!!! example
+!!! example "Reciprocal"
     Includes:
     `EPL-1.0`, `CDDL-1.0`, `APSL-*`, `MPL-*`, `IPL-1.0`
 
@@ -110,7 +110,7 @@ Can be used freely **in unmodified form**, but may require derivative works to b
 
 Permissive licenses that allow redistribution and modification with attribution.
 
-!!! note
+!!! note "Notice"
     Includes:
     `MIT`, `BSD-3-Clause`, `Apache-2.0`, `Zlib`, `Python-2.0`, `PHP-3.01`
 
@@ -118,7 +118,7 @@ Permissive licenses that allow redistribution and modification with attribution.
 
 Free to use **without significant restriction**.
 
-!!! success
+!!! success "Unencumbered"
     Includes:
     `Unlicense`, `CC0-1.0`, `ZeroBSD`
 
@@ -144,13 +144,6 @@ SCA license scanning results include:
 - 📜 **License name** per package
 - 🔒 **Category** (e.g. forbidden, reciprocal)
 - ✅ **Confidence score** on accuracy
-
-!!! example "Sample Finding"
-    ```
-    Package: lodash
-    License: MIT
-    Category: notice
-    ```
 
 ---
 
