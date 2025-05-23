@@ -37,13 +37,10 @@ To get started, connect the **Code Security App** to your Git provider.
         1. Log in to the **Lacework FortiCNAPP Console**
         2. Go to **Settings → Integrations → Code Security**
         3. Click **Add Integration**
-        4. Select:
-            - Integration Type: `GitHub`
+        4. Select **Integration Type**: `GitHub`
         1. Click **Go to GitHub** and sign in
         2. Select your **GitHub organization**, then click **Configure**
-        3. Choose:
-            - **All repositories**, or  
-            - **Only select repositories** using the dropdown
+        3. Using the dropdown, choose **All repositories**, or **Only select repositories**
         4. Click **Install & Authorize**
     
     === "What Happens After"
