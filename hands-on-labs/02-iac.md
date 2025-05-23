@@ -112,22 +112,27 @@ This repo includes Terraform configs with real-world misconfigurations.
 
 !!! example "Configuring the GitHub Integration"
 
-    === "Step-by-Step Instructions"
-    
+    === "Steps-Lacework"
+
+        ![Account Onboarding](images/lwgui.png){align=left width=325}
         1. Log in to the **Lacework FortiCNAPP Console**
         2. Go to **Settings → Integrations → Code Security**
         3. Click **Add Integration**
         4. Select **Integration Type**: `GitHub`
-        1. Click **Go to GitHub** and sign in
-        2. Select your **GitHub organization**, then click **Configure**
-        3. Using the dropdown, choose **All repositories**, or **Only select repositories**
-        4. Click **Install & Authorize**
-    
-    === "What Happens After"
-    
-        - Scans start on the **default branch**
-        - You can manage which scanners are enabled (IaC, SCA, SAST, Secrets)
-        - Results appear in the **Code Security UI**
+        5. Click **Go to GitHub** and sign in
+
+    === "Steps-GitHub"
+
+        ![Account Onboarding](images/ghgui.png){align=left width=325}
+        5. Select your **GitHub organization**, then click **Configure**
+        6. Using the dropdown, choose **All repositories**, or **Only select repositories**
+        7. Click **Install & Authorize**
+
+??? "What Happens After"
+
+    - Scans start on the **default branch**
+    - You can manage which scanners are enabled (IaC, SCA, SAST, Secrets)
+    - Results appear in the **Code Security UI**
 
 ---
 
