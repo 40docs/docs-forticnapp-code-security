@@ -12,18 +12,14 @@ buttons:
 
 Lacework FortiCNAPP's **IaC Security** statically analyzes cloud infrastructure templates like Terraform, CloudFormation, Kubernetes, and Dockerfiles to detect misconfigurations before deployment.
 
----
-
-## Getting Started with IaC Security
-
-To get started, connect the **Code Security App** to your Git provider.
-
 !!! tip "Proactive IaC Security"
     Integrating early in the SDLC lets you catch cloud misconfigurations before runtime—shifting security left.
 
 ---
 
-## SCM Integration
+## Getting Started with IaC Security
+
+To get started, connect the **Code Security App** to your Git provider.
 
 Lacework FortiCNAPP supports repository integration through **GitHub, GitLab, and Bitbucket**.
 
