@@ -85,9 +85,6 @@ You can enable or disable specific security tools for each repo:
 | Kustomize           | ✅                 | ✅     | ✅   |
 | Terraform           | ✅                 | ✅     | ✅   |
 
-!!! note
-    Support for Crossplane, Pulumi, Helmfile, and other formats may be added in future versions.
-
 ---
 
 ### Supported Git Providers
@@ -104,9 +101,6 @@ You can enable or disable specific security tools for each repo:
 ---
 
 ### Supported CI/CD Pipelines
-
-!!! note "Beta Feature"
-    CI/CD support is in **beta** for select customers. Contact your Lacework representative for access.
 
 | CI/CD Pipeline      | Supported |
 | ------------------- | --------- |
