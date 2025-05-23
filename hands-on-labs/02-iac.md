@@ -143,12 +143,21 @@ This repo includes Terraform configs with real-world misconfigurations.
 1. Open the **Lacework Console → Code Security → Repositories**
 2. Click your repo to see:
 
-   * ❌ Public S3 buckets
-   * ❌ Subnets with public IPs
-   * ✅ Inline file/line findings
+   - ❌ Public S3 buckets
+   - ❌ Subnets with public IPs
+   - ✅ Inline file/line findings
 
 !!! tip "Interactive Feedback"
+
     Click a finding to view exact source line, path, and fix recommendation.
+
+    === "Assessments"
+
+        ![Assessments](images/lw_iac1.PNG)
+
+    === "Violation Details"
+
+        ![Violation Details](images/lw_iac2.PNG)
 
 ---
 
