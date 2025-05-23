@@ -115,6 +115,7 @@ This repo includes Terraform configs with real-world misconfigurations.
     === "Steps-Lacework"
 
         ![Account Onboarding](images/lwgui.png){align=left width=325}
+
         1. Log in to the **Lacework FortiCNAPP Console**
         2. Go to **Settings → Integrations → Code Security**
         3. Click **Add Integration**
@@ -124,6 +125,7 @@ This repo includes Terraform configs with real-world misconfigurations.
     === "Steps-GitHub"
 
         ![Account Onboarding](images/ghgui.png){align=left width=325}
+        
         5. Select your **GitHub organization**, then click **Configure**
         6. Using the dropdown, choose **All repositories**, or **Only select repositories**
         7. Click **Install & Authorize**
