@@ -23,31 +23,20 @@ To get started, connect the **Code Security App** to your Git provider.
 
 ---
 
-## GitHub Integration
+## SCM Integration
 
-### Prerequisites
+Lacework FortiCNAPP supports repository integration through **GitHub, GitLab, and Bitbucket**.
 
-* Authorized installation of the GitHub **Lacework IaC Security** App
-* You must have **Owner permissions** for the GitHub organization you want to integrate.
+To connect your version control system:
 
-!!! example "Configuring the GitHub Integration"
+- Navigate to **Settings → Integrations → Code Security** in the Lacework Console
+- Choose your Git provider
+- Follow the interactive authorization flow
 
-    === "Step-by-Step Instructions"
-    
-        1. Log in to the **Lacework FortiCNAPP Console**
-        2. Go to **Settings → Integrations → Code Security**
-        3. Click **Add Integration**
-        4. Select **Integration Type**: `GitHub`
-        1. Click **Go to GitHub** and sign in
-        2. Select your **GitHub organization**, then click **Configure**
-        3. Using the dropdown, choose **All repositories**, or **Only select repositories**
-        4. Click **Install & Authorize**
-    
-    === "What Happens After"
-    
-        - Scans start on the **default branch**
-        - You can manage which scanners are enabled (IaC, SCA, SAST, Secrets)
-        - Results appear in the **Code Security UI**
+!!! tip
+    You must have **Owner or Admin access** to install integration apps for your organization.
+
+For a full GitHub walkthrough, see the [Hands-On](#step-2-install-the-github-app) section below.
 
 ---
 
@@ -120,14 +109,29 @@ This repo includes Terraform configs with real-world misconfigurations.
 
 ### Step 2: Install the GitHub App
 
-1. Go to [https://github.com/apps/iacbot](https://github.com/apps/iacbot)
-2. Click **Configure**
-3. Select your **organization**
-4. Choose **All** or **specific repositories**
-5. Accept the permissions and Terms of Service
+### Prerequisites
 
-!!! warning "Permissions Required"
-    You need **admin** access to install and authorize the app for your organization.
+- Authorized installation of the GitHub **Lacework IaC Security** App
+- You must have **Owner permissions** for the GitHub organization you want to integrate.
+
+!!! example "Configuring the GitHub Integration"
+
+    === "Step-by-Step Instructions"
+    
+        1. Log in to the **Lacework FortiCNAPP Console**
+        2. Go to **Settings → Integrations → Code Security**
+        3. Click **Add Integration**
+        4. Select **Integration Type**: `GitHub`
+        1. Click **Go to GitHub** and sign in
+        2. Select your **GitHub organization**, then click **Configure**
+        3. Using the dropdown, choose **All repositories**, or **Only select repositories**
+        4. Click **Install & Authorize**
+    
+    === "What Happens After"
+    
+        - Scans start on the **default branch**
+        - You can manage which scanners are enabled (IaC, SCA, SAST, Secrets)
+        - Results appear in the **Code Security UI**
 
 ---
 
