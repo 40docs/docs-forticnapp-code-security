@@ -162,9 +162,6 @@ This repo includes Terraform configs with real-world misconfigurations.
    * ✅ Require status checks to pass
 4. Add the **Lacework Code Security** check (if available)
 
-!!! info "Policy Enforcement"
-    You can also create custom policies in Lacework to block merges based on critical misconfigurations.
-
 ---
 
 ### Optional: Scan Locally with the CLI
