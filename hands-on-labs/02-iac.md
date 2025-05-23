@@ -30,33 +30,46 @@ To get started, connect the **Code Security App** to your Git provider.
 * **Admin access** to all repositories you plan to monitor
 * Authorized installation of the GitHub **Lacework IaC Security** App
 
-!!! note
-    You can install the app directly via the [GitHub Marketplace](https://github.com/apps/iacbot).
+!!! note "Configuring the GitHub Integration"
+
+    To integrate Lacework FortiCNAPP with a GitHub organization:
+    
+    1. Log in to the **Lacework FortiCNAPP Console**
+    2. Go to **Settings → Integrations → Code Security**
+    3. Click **Add Integration**
+    4. Select:
+    
+       * Integration Type: `Code Security`
+       * Git Provider: `GitHub`
+    
+    You must have **Owner permissions** for the GitHub organization you want to integrate.
+    
+    1. Click **Go to GitHub** and sign in
+    2. Select your **GitHub organization**, then click **Configure**
+    3. Choose:
+    
+       * **All repositories**, or
+       * **Only select repositories** using the dropdown
+    
+    4. Click **Install & Authorize**
 
 ---
 
-### Verifying Permissions
+### 🔄 What Happens Next
 
-1. Go to GitHub → **Settings → Applications**
-2. Under **Authorized OAuth Apps**, select **Lacework IaC Security**
-3. Confirm the app has access to your GitHub organization
-4. If not yet granted, click **Grant** next to your org
-5. Sign out and back in to **Lacework FortiCNAPP**
+* Lacework FortiCNAPP will begin scanning the **default branch** of all selected repositories
+* Findings appear in the **Code Security UI**
 
 ---
 
-### Configuring the GitHub Integration
+### 🧰 After Integration
 
-1. Navigate to the **Lacework FortiCNAPP Console → IaC Security**
-2. Select **GitHub** as your provider
-3. Go to: [https://github.com/apps/iacbot](https://github.com/apps/iacbot)
-4. Click **Configure**
-5. Choose your GitHub **organization**
-6. Select **All repositories** or pick specific ones
-7. Review permissions and accept the **Terms of Service**
+You can enable or disable specific security tools for each repo:
 
-!!! success "You're Connected"
-    Once installed, Lacework begins scanning supported IaC templates in your repo automatically.
+* ✅ Infrastructure-as-Code Security
+* ✅ SCA (Software Composition Analysis)
+* ✅ SAST (Static Application Security Testing)
+* ✅ Secrets Detection
 
 ---
 
