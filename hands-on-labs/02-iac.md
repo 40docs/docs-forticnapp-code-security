@@ -27,49 +27,30 @@ To get started, connect the **Code Security App** to your Git provider.
 
 ### Prerequisites
 
-* **Admin access** to all repositories you plan to monitor
 * Authorized installation of the GitHub **Lacework IaC Security** App
+* You must have **Owner permissions** for the GitHub organization you want to integrate.
 
-!!! note "Configuring the GitHub Integration"
+!!! example "Configuring the GitHub Integration"
 
-    To integrate Lacework FortiCNAPP with a GitHub organization:
+    === "Step-by-Step Instructions"
     
-    1. Log in to the **Lacework FortiCNAPP Console**
-    2. Go to **Settings → Integrations → Code Security**
-    3. Click **Add Integration**
-    4. Select:
+        1. Log in to the **Lacework FortiCNAPP Console**
+        2. Go to **Settings → Integrations → Code Security**
+        3. Click **Add Integration**
+        4. Select:
+            - Integration Type: `GitHub`
+        1. Click **Go to GitHub** and sign in
+        2. Select your **GitHub organization**, then click **Configure**
+        3. Choose:
+            - **All repositories**, or  
+            - **Only select repositories** using the dropdown
+        4. Click **Install & Authorize**
     
-       * Integration Type: `Code Security`
-       * Git Provider: `GitHub`
+    === "What Happens After"
     
-    You must have **Owner permissions** for the GitHub organization you want to integrate.
-    
-    1. Click **Go to GitHub** and sign in
-    2. Select your **GitHub organization**, then click **Configure**
-    3. Choose:
-    
-       * **All repositories**, or
-       * **Only select repositories** using the dropdown
-    
-    4. Click **Install & Authorize**
-
----
-
-### 🔄 What Happens Next
-
-* Lacework FortiCNAPP will begin scanning the **default branch** of all selected repositories
-* Findings appear in the **Code Security UI**
-
----
-
-### 🧰 After Integration
-
-You can enable or disable specific security tools for each repo:
-
-* ✅ Infrastructure-as-Code Security
-* ✅ SCA (Software Composition Analysis)
-* ✅ SAST (Static Application Security Testing)
-* ✅ Secrets Detection
+        - Scans start on the **default branch**
+        - You can manage which scanners are enabled (IaC, SCA, SAST, Secrets)
+        - Results appear in the **Code Security UI**
 
 ---
 
