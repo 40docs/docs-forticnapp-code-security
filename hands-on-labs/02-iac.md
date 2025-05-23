@@ -158,8 +158,9 @@ This repo includes Terraform configs with real-world misconfigurations.
 2. Edit or create a rule for `main`
 3. Enable:
 
-   * ✅ Require pull request review
-   * ✅ Require status checks to pass
+   - ✅ Require pull request review
+   - ✅ Require status checks to pass
+
 4. Add the **Lacework Code Security** check (if available)
 
 ---
