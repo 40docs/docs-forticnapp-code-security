@@ -125,10 +125,10 @@ This repo includes Terraform configs with real-world misconfigurations.
     === "Steps-GitHub"
 
         ![Account Onboarding](images/ghgui.png){align=left width=325}
-        
-        5. Select your **GitHub organization**, then click **Configure**
-        6. Using the dropdown, choose **All repositories**, or **Only select repositories**
-        7. Click **Install & Authorize**
+
+        1. Select your **GitHub organization**, then click **Configure**
+        2. Using the dropdown, choose **All repositories**, or **Only select repositories**
+        3. Click **Install & Authorize**
 
 ??? "What Happens After"
 
