@@ -22,7 +22,7 @@ SAST (Static Application Security Testing) reviews your code without executing i
 * ❌ Command and SQL injection
 * ❌ Insecure crypto usage
 * ❌ Dangerous APIs (e.g., `eval`, `os.system`)
-* **ETC,**
+* ETC
 
 !!! tip "Shift Security Left"
     Lacework SAST integrates directly into GitHub, CI/CD, and VS Code, helping developers fix issues where they code.
@@ -62,6 +62,20 @@ SAST (Static Application Security Testing) reviews your code without executing i
 ## Hands-On
 
 This walkthrough demonstrates SAST findings using a vulnerable Python app.
+
+```txt
+lab_forticnapp_code_security/
+├── app/
+│   ├── app.py              # Flask app with all insecure routes
+│   ├── config.py           # ❌ Hardcoded AWS secret
+│   ├── Dockerfile          # ❌ Insecure container config
+│   ├── requirements.txt    # ❌ Known vulnerable packages
+│   └── vuln_app.py         # ❌ Insecure helper functions (SAST triggers)
+├── terraform/
+│   ├── resource_aws_s3_bucket.tf   # ❌ Public S3 bucket
+│   └── resource_aws_subnet.tf      # ❌ Public subnet
+├── README.md
+```
 
 ---
 
