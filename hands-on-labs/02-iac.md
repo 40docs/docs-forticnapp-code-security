@@ -112,7 +112,7 @@ This repo includes Terraform configs with real-world misconfigurations.
 
 !!! example "Configuring the GitHub Integration"
 
-    === "Steps-Lacework"
+    === "Steps: FortiCNAPP"
 
         ![Account Onboarding](images/lwgui.png){align=left width=325}
 
@@ -122,7 +122,7 @@ This repo includes Terraform configs with real-world misconfigurations.
         4. Select **Integration Type**: `GitHub`
         5. Click **Go to GitHub** and sign in
 
-    === "Steps-GitHub"
+    === "Steps: GitHub"
 
         ![Account Onboarding](images/ghgui.png){align=left width=325}
 
