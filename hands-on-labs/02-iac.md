@@ -124,17 +124,17 @@ This repo includes Terraform configs with real-world misconfigurations.
 
     === "Steps: GitHub"
 
-        ![Account Onboarding](images/ghgui.png){align=left width=325}
+        ![Account Onboarding](images/ghgui.PNG){align=left width=325}
 
         1. Select your **GitHub organization**, then click **Configure**
         2. Using the dropdown, choose **All repositories**, or **Only select repositories**
         3. Click **Install & Authorize**
 
-??? "What Happens After"
+    === "What Happens After"
 
-    - Scans start on the **default branch**
-    - You can manage which scanners are enabled (IaC, SCA, SAST, Secrets)
-    - Results appear in the **Code Security UI**
+        - Scans start on the **default branch**
+        - You can manage which scanners are enabled (IaC, SCA, SAST, Secrets)
+        - Results appear in the **Code Security UI**
 
 ---
 
