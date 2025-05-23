@@ -109,7 +109,7 @@ This repo includes Terraform configs with real-world misconfigurations.
 
 ### Step 2: Install the GitHub App
 
-### Prerequisites
+#### Prerequisites
 
 - Authorized installation of the GitHub **Lacework IaC Security** App
 - You must have **Owner permissions** for the GitHub organization you want to integrate.
