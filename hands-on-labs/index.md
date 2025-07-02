@@ -35,7 +35,7 @@ This guide is intended for **developers, DevOps, and security engineers** managi
 
 | IDE       | IaC | SCA | SAST |
 |-----------|-----|-----|------|
-| **VS Code**   | ❌ No | ✅ Yes | ✅ Yes |
+| **VS Code**   | ✅ Yes | ✅ Yes | ✅ Yes |
 | **IntelliJ**  | ❌ No | ❌ No | ❌ No |
 
 ---
